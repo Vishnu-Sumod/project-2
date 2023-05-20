@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Form</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+/* body */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color:whitesmoke;
+            align-items: center;
+        }
+        header{
+            background-color: black;
+        }
+        .main{
+            align-self: center;
+            padding: 20px;
+        }
+/* stickey nav bar */
+        .navbar{
+            display: flex;
+            position: fixed;
+            background-color: #000000;
+            width: 100%;
+            padding: 5px;
+            justify-content: space-between;
+            align-items: center;
+            color:white;
+            height: 25px;
+        }
+/* nested table */
+        .list-items li{
+            display: inline-block;
+            margin-right: 10px;
+        }
+        li {
+            list-style: none;
+        }
+        div ul li a:link{
+            text-decoration: none;
+            color:white;
+        }
+/* tabel */
+        table,th,tbody,td{
+            border-spacing: 0;
+            border: 1px solid rgb(207, 207, 207);
+        } 
+        .table-sec{
+            background-color: white;
+            width:80%;
+        }
+/* form */
+        .reg-form{
+            background-color: white;
+            width:80%;
+        }
+        .form-container{
+            margin-left:15px ;
+        }
+        form div input{
+            width: 95%;
+            padding: 7px;
+            border:1px solid rgb(227, 216, 216) 
+        }
+        input[type="text"]:focus {
+        outline: none;
+        border:2px solid skyblue;
+        background-color:;
+        }
+        input[type="text"]:valid , input[type="email"]:valid{
+        background-color:  rgb(228, 240, 251);
+        }
+/* register button */
+        .register-button{
+            background-color: black;
+            color: white;
+            width: 98%;
+        }
+    </style>
+  </head>
+<!-- body -->
+  <body>
+    <!-- sticky nav bar -->
+    <header >
+      <nav class="navbar">
+        <div class="logo">
+          <p>Library System</p>
+        </div>
+
+        <div class="list">
+          <ul class="list-items">
+            <li><a href="#books">Books</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a>Contact Us</a></li>
+            <li><a>Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main body -->
+    <main class="main">
+      <!-- table  -->
+
+      <section class="table-sec" >
+        <h1 id="books">Books</h1>
+        <table id="main-table" align="center">
+          <thead>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Availability</th>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>
+                <table>
+                  <a href="#">Book Title 1</a>
+                  <tr>
+                    <td>Publication Date:2000</td>
+                  </tr>
+                  <tr>
+                    <td>Page Count:250</td>
+                  </tr>
+                  <tr>
+                    <td>ISBN: 123-4567890001</td>
+                  </tr>
+                </table>
+              </td>
+              <td>Author Name 1</td>
+              <td>Genre 1</td>
+              <td>Available</td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>
+                <table>
+                  <a href="#">Book Title 2</a>
+                  <tr>
+                    <td>Publication Date:2005</td>
+                  </tr>
+                  <tr>
+                    <td>Page Count:300</td>
+                  </tr>
+                  <tr>
+                    <td>ISBN: 123-4567890002</td>
+                  </tr>
+                </table>
+              </td>
+
+              <td>Author Name 2</td>
+              <td>Genre 2</td>
+              <td>Not Available</td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td>
+                <table>
+                  <a href="#">Book Title 3</a>
+                  <tr>
+                    <td>Publication Date:2010</td>
+                  </tr>
+                  <tr>
+                    <td>Page Count:350</td>
+                  </tr>
+                  <tr>
+                    <td>ISBN: 123-4567890003</td>
+                  </tr>
+                </table>
+              </td>
+              <td>Author Name 3</td>
+              <td>Genre 3</td>
+              <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>
+                  <table>
+                    <a href="#">Book Title 4</a>
+                    <tr>
+                      <td>Publication Date:2001</td>
+                    </tr>
+                    <tr>
+                      <td>Page Count:230</td>
+                    </tr>
+                    <tr>
+                      <td>ISBN: 123-4567890004</td>
+                    </tr>
+                  </table>
+                </td>
+                <td>Author Name 4</td>
+                <td>Genre 4</td>
+                <td>Not Available</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>
+                  <table>
+                    <a href="#">Book Title 5</a>
+                    <tr>
+                      <td>Publication Date:2009</td>
+                    </tr>
+                    <tr>
+                      <td>Page Count:410</td>
+                    </tr>
+                    <tr>
+                      <td>ISBN: 123-4567890005</td>
+                    </tr>
+                  </table>
+                </td>
+                <td>Author Name 5</td>
+                <td>Genre 5</td>
+                <td>Available</td>
+              </tr>
+          </tbody>
+        </table>
+      </section> 
+<!-- registration form -->
+      <section class="reg-form">
+        <div class="form-container" >
+          <h1 id="register">Register</h1>
+          <form >
+<!--first name  -->
+            <div>
+              <label for="fname">First Name:</label>
+              <br />
+              <input type="text" id="fname" name="fname" required />
+            </div>
+            <br />
+
+<!--last name  -->
+            <div>
+              <label for="lname">Last Name:</label>
+              <br />
+              <input type="text" id="lname" name="lname" required />
+            </div>
+            <br />
+
+<!-- date of birth -->
+            <div>
+              <label for="dob">Date Of Birth:</label>
+              <br />
+              <input type="date" id="dob" name="dob" required />
+            </div>
+            <br />
+
+<!-- age -->
+            <div>
+              <label for="age">Age:</label>
+              <br />
+              <input type="number" id="age" name="age" min="5" max="100" required/>
+            </div>
+            <br />
+
+<!-- email -->
+            <div>
+              <label for="email">Email:</label>
+              <br />
+              <input type="email" id="email" required />
+            </div>
+            <br />
+
+<!-- password -->
+            <div>
+              <label for="password">Password:</label>
+              <br />
+              <input type="password" id="password" pattern=".{6,}" required />
+            </div>
+            <br />
+
+<!-- confirm password  -->
+            <div>
+              <label for="confirm-password">Confirm Password:</label>
+              <br />
+              <input
+                type="password"
+                id="confirm-password"
+                pattern=".{6,}"
+                required/>
+              </div>
+              <br />
+
+<!-- register btn -->
+            <div>
+              <input type="submit" value="Register" class="register-button">
+            </div>
+            <br />
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
